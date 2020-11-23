@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useMemo, useCallback } from "react";
-import ReactDOM from "react-dom";
+import { useEffect, useState, useMemo, useCallback } from "react";
 
 /**
  * Uncomment the hooks below uwc-debug comment to see the the output
@@ -16,11 +15,13 @@ const App = () => {
   }, [a, b]);
 
   // uwc-debug
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const v = useMemo(() => {
     return a + 1;
   }, [a]);
 
   // uwc-debug
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const callback = useCallback(() => {
     console.log(b);
     return "some callback";
