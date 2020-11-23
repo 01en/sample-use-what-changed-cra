@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/sample-use-what-changed-cra/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/sample-use-what-changed-cra/static/js/main.5d43dd54.chunk.js",
-    "main.js.map": "/sample-use-what-changed-cra/static/js/main.5d43dd54.chunk.js.map",
-    "runtime-main.js": "/sample-use-what-changed-cra/static/js/runtime-main.6b40c6d0.js",
-    "runtime-main.js.map": "/sample-use-what-changed-cra/static/js/runtime-main.6b40c6d0.js.map",
-    "static/js/2.26d92166.chunk.js": "/sample-use-what-changed-cra/static/js/2.26d92166.chunk.js",
-    "static/js/2.26d92166.chunk.js.map": "/sample-use-what-changed-cra/static/js/2.26d92166.chunk.js.map",
-    "static/js/3.e1328645.chunk.js": "/sample-use-what-changed-cra/static/js/3.e1328645.chunk.js",
-    "static/js/3.e1328645.chunk.js.map": "/sample-use-what-changed-cra/static/js/3.e1328645.chunk.js.map",
+    "main.js": "/sample-use-what-changed-cra/static/js/main.fdc0efe5.chunk.js",
+    "main.js.map": "/sample-use-what-changed-cra/static/js/main.fdc0efe5.chunk.js.map",
+    "runtime-main.js": "/sample-use-what-changed-cra/static/js/runtime-main.91078834.js",
+    "runtime-main.js.map": "/sample-use-what-changed-cra/static/js/runtime-main.91078834.js.map",
+    "static/js/2.37999c8b.chunk.js": "/sample-use-what-changed-cra/static/js/2.37999c8b.chunk.js",
+    "static/js/2.37999c8b.chunk.js.map": "/sample-use-what-changed-cra/static/js/2.37999c8b.chunk.js.map",
+    "static/js/3.96e016ea.chunk.js": "/sample-use-what-changed-cra/static/js/3.96e016ea.chunk.js",
+    "static/js/3.96e016ea.chunk.js.map": "/sample-use-what-changed-cra/static/js/3.96e016ea.chunk.js.map",
     "index.html": "/sample-use-what-changed-cra/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/sample-use-what-changed-cra/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.26d92166.chunk.js.LICENSE.txt": "/sample-use-what-changed-cra/static/js/2.26d92166.chunk.js.LICENSE.txt"
+    "static/js/2.37999c8b.chunk.js.LICENSE.txt": "/sample-use-what-changed-cra/static/js/2.37999c8b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b40c6d0.js",
-    "static/js/2.26d92166.chunk.js",
+    "static/js/runtime-main.91078834.js",
+    "static/js/2.37999c8b.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.5d43dd54.chunk.js"
+    "static/js/main.fdc0efe5.chunk.js"
   ]
 }
