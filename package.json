@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
+    "@simbathesailor/use-what-changed": "^0.1.25",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -151,9 +152,18 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "@simbathesailor/babel-plugin-use-what-changed",
+        {
+          "active": true
+        }
+      ]
     ]
   },
   "devDependencies": {
-    "@babel/plugin-syntax-jsx": "^7.12.1"
+    "@babel/plugin-syntax-jsx": "^7.12.1",
+    "@simbathesailor/babel-plugin-use-what-changed": "^0.1.17"
   }
 }
