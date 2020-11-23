@@ -2,6 +2,7 @@
   "name": "lt-sample",
   "version": "0.1.0",
   "private": true,
+  "homepage": "sample-use-what-changed-cra",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
