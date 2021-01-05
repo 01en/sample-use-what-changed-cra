@@ -1,4 +1,16 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo, useCallback, useRef, useDebugValue } from "react";
+
+const useRenderCount = () => {
+  const renderCount = useRef<number>(0);
+
+  // debug
+  useDebugValue(renderCount);
+
+  useEffect(()  => {
+    renderCount.current++;
+    console.log(`renderCount: ${renderCount.current ?? 0}`);
+  })
+}
 
 /**
  * Uncomment the hooks below uwc-debug comment to see the the output
@@ -6,19 +18,25 @@ import { useEffect, useState, useMemo, useCallback } from "react";
  * hooks that we use on a daily basis
  */
 const App = () => {
-  const [a, setA] = useState(0);
-  const [b, setB] = useState(0);
+  const [count, setCount] = useState(0);
 
+  useRenderCount();
+
+  useEffect(() => {
+    setCount(count + 1);
+  }, []);
+
+  const [b, setB] = useState(0);
   //uwc-debug
   useEffect(() => {
     // do something
-  }, [a, b]);
+  }, [count, b]);
 
   // uwc-debug
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const v = useMemo(() => {
-    return a + 1;
-  }, [a]);
+    return count + 1;
+  }, [count]);
 
   // uwc-debug
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -32,20 +50,20 @@ const App = () => {
       <h2>Start editing to see some magic happen!</h2>
       <button
         onClick={() => {
-          setA(c => c + 1);
+          setCount((c) => c + 1);
         }}
       >
         Change A
       </button>
       <button
         onClick={() => {
-          setB(c => c + 1);
+          setB((c) => c + 1);
         }}
       >
         Change B
       </button>
       <h2>value:a</h2>
-      <div>{a}</div>
+      <div>{count}</div>
       <h2>value:b</h2>
       <div>{b}</div>
     </div>
@@ -53,4 +71,3 @@ const App = () => {
 };
 
 export default App;
-
