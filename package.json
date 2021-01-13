@@ -144,19 +144,6 @@
     ],
     "resetMocks": true
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "@simbathesailor/babel-plugin-use-what-changed",
-        {
-          "active": true
-        }
-      ]
-    ]
-  },
   "devDependencies": {
     "@babel/plugin-syntax-jsx": "^7.12.1",
     "@simbathesailor/babel-plugin-use-what-changed": "^0.1.17"

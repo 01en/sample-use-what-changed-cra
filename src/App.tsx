@@ -1,3 +1,4 @@
+// uwc-debug-below
 import { useEffect, useState, useMemo, useCallback, useRef, useDebugValue } from "react";
 
 const useRenderCount = () => {
@@ -26,38 +27,37 @@ const App = () => {
     setCount(count + 1);
   }, []);
 
-  const [b, setB] = useState(0);
+  const [a, setA] = useState("React Night");
+  const [b, setB] = useState(1);
   //uwc-debug
   useEffect(() => {
     // do something
-  }, [count, b]);
+  }, [a, b]);
 
-  // uwc-debug
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const v = useMemo(() => {
     return count + 1;
   }, [count]);
 
-  // uwc-debug
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const callback = useCallback(() => {
-    console.log(b);
+    console.log(a);
     return "some callback";
-  }, [b]);
+  }, [a]);
 
   return (
     <div className="App">
       <h2>Start editing to see some magic happen!</h2>
       <button
         onClick={() => {
-          setCount((c) => c + 1);
+          setB((b) => b + 1);
         }}
       >
         Change A
       </button>
       <button
         onClick={() => {
-          setB((c) => c + 1);
+          setA((c) => c + 1);
         }}
       >
         Change B
@@ -65,7 +65,7 @@ const App = () => {
       <h2>value:a</h2>
       <div>{count}</div>
       <h2>value:b</h2>
-      <div>{b}</div>
+      <div>{a}</div>
     </div>
   );
 };
