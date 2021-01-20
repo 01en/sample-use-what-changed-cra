@@ -1,17 +1,23 @@
-// uwc-debug-below
-import { useEffect, useState, useMemo, useCallback, useRef, useDebugValue } from "react";
+import {
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+  useRef,
+  useDebugValue,
+} from "react";
 
-const useRenderCount = () => {
+const useRenderInfiniteLoopCount = () => {
   const renderCount = useRef<number>(0);
 
   // debug
   useDebugValue(renderCount);
 
-  useEffect(()  => {
+  useEffect(() => {
     renderCount.current++;
     console.log(`renderCount: ${renderCount.current ?? 0}`);
-  })
-}
+  });
+};
 
 /**
  * Uncomment the hooks below uwc-debug comment to see the the output
@@ -21,7 +27,8 @@ const useRenderCount = () => {
 const App = () => {
   const [count, setCount] = useState(0);
 
-  useRenderCount();
+  // TODO: コメント解除で無限ループ発生
+  // useRenderInfiniteLoopCount();
 
   useEffect(() => {
     setCount(count + 1);
@@ -29,7 +36,7 @@ const App = () => {
 
   const [a, setA] = useState("React Night");
   const [b, setB] = useState(1);
-  //uwc-debug
+  // uwc-debug
   useEffect(() => {
     // do something
   }, [a, b]);
